@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(177, 196, 218);
+    color : #fff;
+}
+body {
+    font-family:arial
+}
+h1.h2.h3.h4.h5{
+    font-weight:normal;
+    margin: 0;
+}

@@ -1,0 +1,21 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="navbar-nav">
+            <a class="nav-link active" href="{% url 'category:home' %}">Home</a>
+            {% if request.user.is_authenticated %}
+            <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit">logout</button>
+            </form>
+            <br/>
+
+            {% else %}
+            <a class="nav-link active" href="{% url 'accounts:signup' %}">SignUp</a>
+            {% csrf_token %}
+            <a class="nav-link active" href="{% url 'accounts:login' %}">Login</a>
+            {%endif%}
+        </div>
+    </div>
+</nav>
